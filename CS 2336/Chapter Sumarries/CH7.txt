@@ -1,0 +1,80 @@
+Chapter 7 Powerpoint
+
+Chapter 7 Class Notes
+
+
+Chapter 7 Book
+	7.1
+		Obj
+		
+		Content	
+	7.2
+		Obj
+		Array reference varialbes
+		Create arrays
+		arrayRefVar.length
+		Default value stored in arrays
+		Access with index
+		Declare, create and initialize
+		For each
+		Content
+	7.3
+		Obj
+		Example
+		
+		Content
+	7.4
+		Obj
+		Example
+		
+		Content
+	7.5
+		Obj
+		Copy array to another
+		
+		Content
+	7.6
+		Obj
+		Array arguments
+		Array return
+		
+		Content
+	7.7
+		Obj
+		Array arguments
+		Array return
+		
+		Content
+	7.8
+		Obj
+		Array arguments
+		Array return
+		
+		Content
+	7.9
+		Obj
+		Define method with variable lenth argument list
+		
+		Content
+	7.10
+		Obj
+		Linear search
+		Binary search
+		
+		Content
+	7.11
+		Obj
+		Selection sort
+		
+		Content
+	7.12
+		Obj
+		java.util.Arrays
+		
+		Content
+	7.13
+		Obj
+		Pass to command line from main
+		
+		Content
+	

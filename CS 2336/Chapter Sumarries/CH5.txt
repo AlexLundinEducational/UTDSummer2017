@@ -1,0 +1,142 @@
+Chapter 5 Powerpoint
+
+Chapter 5 Class Notes
+
+
+Chapter 5 Book
+	5.1
+	5.2
+		Obj
+			write while loop
+			loop design strategy
+			sentinel value
+			use file for input
+		Content
+			the loop continuation condition must evaluate to boolean value
+			diagram
+				one enrty or exit allowed per node
+				diamond - continue condition
+				square - statements
+			off by one errors, understand how counter variables work with continuation condition
+			write code that the loop will execute, then build loop around it
+			sentinel value is a specific value used to end a loop
+			cp 	- understand areas of the loop body in relation to increment operation
+				- this one is sneaky because the output line is still in the body of the loop
+				- this loop is infinite because no incrementation inside body, it's just barely outside of the body.
+					int i = 1;
+					while (i < 10)
+						if(i % 2 == 0)
+							System.out.println(i);
+							i++;
+				- this loop happens 9 times, on the even interations of i, the loop prints the next odd value
+					int i = 1;
+					while (i < 10)
+						if(i % 2 == 0)
+							System.out.println(i++);
+				- this loop happens 9 times, on the even interations of i, the loop prints the next odd value
+					int i = 1;
+					while (i < 10)
+						if(i++ % 2 == 0)
+							System.out.println(i);							
+			cp - use sentinel values correctly, don't pick a value that the loop can reach on accident
+			cp - while loop body with no braces only includes one line, pay attention to when increment is outside of body
+			
+			cp - integer overflow on a infinite loop, counter++ a whole bunch of times, eventually counter == -2147483648
+			
+		
+	5.3
+		Obj
+			do while statements
+		Content
+			do while is same as while, except body executes first
+			syntax
+			do {
+				// Loop body;
+				Statement(s);						// pay attention to the format of the body
+													/removing braces, then the body is only one line after the do
+			} while (loop-continuation-condition);	// continuation must result in a boolean value, true or false
+			do and do while are interchangable, it depends on what's more convienient for programmer
+			cp - understand how do while loop operates
+			cp - only difference between while and do while is this, while is post test, do while is pre test. 
+				- This means do while AWLAYS happens atleast once
+	5.4
+		Obj
+			for statements
+		Content
+			syntax
+			for (initial-condition; loop-continuation-condition; action-after-each-iteration)	// PAY ATTENTION HERE
+																								//a semicolon here kills the body
+				{
+					
+					// Loop body
+					
+				}
+			understand controll variable scope, if defined in loop, is limited to loop only
+			for loops can leave any of these three items out of the header if needed
+			(initial-condition; loop-continuation-condition; action-after-each-iteration)
+			the loop-continuation-condition EVALUATES TO TRUE if left blank
+			cp	- understand that action-after-each-iteration section happens after 
+				- evaluating loop-continuation-condition, so ++i and i++ are the same
+				- when used inside the loop-continuation-condition 
+				- in relation to the loop body and loop-continuation-condition
+			cp 	- pay attention to how accumulation happens inside the loop
+				- some accumulators use user input rather than accumulating the counter
+				- take time and triple check every loop
+			cp	- understand a for loop with all items left blank is infinite
+			cp 	- understand variable scope in relation to loop body
+			cp	- be able to convert code between all three loop types (5.13, page 173)
+			cp 	- be able to count through number of iterations
+	5.5
+		Obj
+			three loop types
+		Content
+			pretest - while, for
+			posttest - do while
+			
+			cp 	- it's possible to convert any of the 3 types of loops to any other type
+			cp	- every class needs public static void main function
+				- pay attention to semicolons that kill loop bodies
+				- make sure necessary variables are declared
+			cp	- need semicolon after test coniditon on do while loop
+			
+	5.6
+		Obj
+			nested loops
+		Content
+			nested loops increase run time by a factor of n for each nested
+			cp	- be able to evaluate nested loop table outputs
+				- use a matrix to visually solve on test
+			
+			
+	5.7
+		Obj
+			numerical errors
+		Content
+			add smaller numbers to bigger ones to reduce finite point arithmetic errors
+			
+	5.8
+		Obj
+			examples (GCD)
+		Content
+			
+	5.9
+		Obj
+			break continue
+		Content
+			break, immediately exit loop or switch
+			continue, move to next iteration
+			
+	5.10
+		Obj
+			characters in a string, palindrome
+		Content
+			
+	5.11
+		Obj
+			prime numbers
+		Content
+			
+	
+
+
+	

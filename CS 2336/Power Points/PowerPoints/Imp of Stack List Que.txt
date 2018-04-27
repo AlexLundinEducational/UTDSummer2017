@@ -1,0 +1,37 @@
+Summary
+
+PowerPoint
+all
+
+Objectives
+To design common features of lists in an interface and provide skeleton implementation in an abstract class (§24.2).
+To design and implement a dynamic list using an array (§24.3).
+To design and implement a dynamic list using a linked structure (§24.4).
+To design and implement a stack class using an array list and a queue class using a linked list (§24.5).
+To design and implement a priority queue using a heap (§24.6).
+
+	List
+		Functionality
+		Retrieve element from anywhere
+		Insert new
+		Delete element
+		Length
+		Search
+		Empty or not
+	
+	Implemenations
+		Array
+			Fixed size
+		LinkedList
+			Ability to extend size
+			
+	Need to understand the tradoffs in time complexity
+	
+
+CH24
+Objectives
+To design common features of lists in an interface and provide skeleton implementation in an abstract class (§24.2).
+To design and implement a dynamic list using an array (§24.3).
+To design and implement a dynamic list using a linked structure (§24.4).
+To design and implement a stack class using an array list and a queue class using a linked list (§24.5).
+To design and implement a priority queue using a heap (§24.6).

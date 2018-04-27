@@ -1,0 +1,57 @@
+Summary
+
+PowerPoint
+all slides
+Objectives
+To explore the relationship between interfaces and classes in the Java Collections Framework hierarchy (§20.2).
+To use the common methods defined in the Collection interface for operating collections (§20.2).
+To use the Iterator interface to traverse the elements in a collection (§20.3).
+To use a for-each loop to traverse the elements in a collection (§20.3).
+To explore how and when to use ArrayList or LinkedList to store elements (§20.4).
+To compare elements using the Comparable interface and the Comparator interface (§20.5).
+To use the static utility methods in the Collections class for sorting, searching, shuffling lists, and finding the largest and smallest element in collections (§20.6).
+To develop a multiple bouncing balls application using ArrayList (§20.7).
+To distinguish between Vector and ArrayList and to use the Stack class for creating stacks (§20.8).
+To explore the relationships among Collection, Queue, LinkedList, and PriorityQueue and to create priority queues using the PriorityQueue class (§20.9).
+To use stacks to write a program to evaluate expressions (§20.10).
+
+	Collection  - holds group of objects
+				- lists, sets maps
+
+	List	- sequential order
+			- user specify element order
+			- acess by index
+	List iterator
+			- add
+			- has previous
+			- has next
+			- previous
+			- previous Index
+			-set
+	ArrayList
+			-radomn acess through index
+			-insert, remove from end only
+			
+	LinkedList
+			-insert, remove from anywhere
+			-grow shrink dynamically
+			
+	Array
+			- no insert or delete
+			- fixed size
+			
+	Vector Class
+			- same as ArrayList
+			- additions for accessing and modifying a vector
+			
+	Stack	
+			-LIFO
+			-access from top
+			-retrive, insert and remove from top
+	
+	Queue
+			-FIFO
+			-elements added to end
+			-retrieved from beginning
+			
+CH 20

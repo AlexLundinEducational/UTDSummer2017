@@ -1,0 +1,273 @@
+Stack Overflow
+
+
+//http://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
+//http://stackoverflow.com/questions/16430922/working-with-nested-panels
+//https://stackoverflow.com/questions/16430922/working-with-nested-panels
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.text.*;
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.event.*;
+
+public class JaGCharCreation  {
+
+//set inital size of window
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+int initalWidth = (int) screenSize.width - 50;
+int initalHeight = (int) screenSize.height - 50;
+
+public static void main(String[] args) {
+    new JaGCharCreation ();
+}
+
+//set up thread safe invoking for GUI
+public JaGCharCreation () {
+    EventQueue.invokeLater(new Runnable() {
+        @Override
+        public void run() {
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+            }
+
+            JFrame frame = new JFrame("Testing");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setLayout(new BorderLayout());
+            frame.add(new TestPane());
+            frame.pack();
+            //frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+            // Give the frame an initial size.
+            frame.setSize(initalWidth, initalHeight);
+        }
+    });
+}
+
+//main panel to hold all others
+public class TestPane extends JPanel {
+    public TestPane() {
+        setLayout(new GridLayout(0, 2));
+        add(createLeftPane());
+        add(createRightPane());
+    }//end of class for master frame
+
+    protected JPanel createLeftPane() {
+        JLabel CharName = new JLabel("Character Name");
+        CharName.setFont(new Font("Impact", Font.BOLD, 30));
+        CharName.setBorder(new EmptyBorder(0, 81,0, 00));
+
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBorder(new EmptyBorder(10, 10, 10, 10));
+        panel.setBackground(Color.RED);
+
+        JPanel content = new JPanel(new GridBagLayout());
+        content.setOpaque(false);
+
+        JPanel view3D = new JPanel();
+        view3D.setBackground(Color.DARK_GRAY);
+        JPanel view2D = new JPanel();
+        view2D.setBackground(Color.PINK);
+        JPanel viewIsometric = new JPanel();
+        viewIsometric.setBackground(Color.YELLOW);
+        JPanel viewData = new JPanel();
+        viewData.setBackground(Color.MAGENTA);
+
+        JPanel top = new JPanel(new GridLayout(0, 2));
+        top.setBorder(new EmptyBorder(0, 80,0, 80));
+        top.setBackground(Color.GREEN);
+        top.add(view3D);
+        top.add(view2D);
+
+        JPanel bottom = new JPanel(new GridLayout(2, 0));
+        bottom.setBorder(new EmptyBorder(0, 80,0, 80));
+        bottom.setBackground(Color.GREEN);
+        bottom.add(viewIsometric);
+        bottom.add(new JScrollPane(viewData));
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.weighty = 0.5f;
+        gbc.weightx = 1f;
+        gbc.fill = GridBagConstraints.BOTH;
+
+        content.add(top, gbc);
+        content.add(bottom, gbc);
+
+        panel.add(content);
+        panel.add(CharName, BorderLayout.NORTH);
+
+        return  panel;
+    }//end left pane
+
+    protected JPanel createRightPane() {
+
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBackground(Color.BLUE);
+
+        //set up our image for the title bars
+        ImageIcon icon = new ImageIcon("GradientDetail.png");
+        Image img = icon.getImage();
+        img = img.getScaledInstance(initalWidth/2, 40, java.awt.Image.SCALE_SMOOTH);
+        final ImageIcon iconSM = new ImageIcon(img);
+
+        JPanel name_panel = new JPanel(new BorderLayout())
+            {
+            protected void paintComponent(Graphics g)
+                {
+                //  Dispaly image at full size
+                g.drawImage(iconSM.getImage(), 0, 0, null);
+                super.paintComponent(g);
+                }
+            };
+        name_panel.setOpaque( false );
+        JLabel label = new JLabel(" Character Name");
+        label.setFont(new Font("Impact", Font.BOLD, 30));
+        label.setForeground(Color.white);
+        label.setOpaque(false);
+        JPanel name_panel_text = new JPanel(new BorderLayout());
+        name_panel_text.setBackground(Color.WHITE);
+
+        name_panel.add(label, BorderLayout.NORTH);
+        panel.add(name_panel_text);
+        panel.add(name_panel);
+        return panel;
+    }//end right pane
+
+    //bassed from http://stackoverflow.com/questions/7340001/determine-clicked-jpanel-component-in-the-mouselistener-event-handling
+    public class MouseAdapterMod extends MouseAdapter {
+       // usually better off with mousePressed rather than clicked
+       public void mousePressed(MouseEvent e) {
+           if (e.getSource() == "name_panel"){
+
+           }
+       }
+    }
+}//end master panel set
+}//end master class
+
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+
+public class Test {
+
+    public static void main(String[] args) {
+        new Test();
+    }
+
+    public Test() {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+                }
+
+                JFrame frame = new JFrame("Testing");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setLayout(new BorderLayout());
+                frame.add(new TestPane());
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
+            }
+        });
+    }
+
+    public class TestPane extends JPanel {
+
+        public TestPane() {
+
+            setLayout(new GridLayout(0, 2));
+            add(createLeftPane());
+            add(createRightPane());
+
+        }
+
+        protected JPanel createLeftPane() {
+
+            JPanel panel = new JPanel(new BorderLayout());
+            panel.setBorder(new EmptyBorder(10, 10, 10, 10));
+            panel.setBackground(Color.RED);
+
+            JPanel content = new JPanel(new GridBagLayout());
+            content.setOpaque(false);
+
+            JPanel view3D = new JPanel();
+            view3D.setBackground(Color.DARK_GRAY);
+            JPanel view2D = new JPanel();
+            view2D.setBackground(Color.PINK);
+            JPanel viewIsometric = new JPanel();
+            viewIsometric.setBackground(Color.YELLOW);
+            JPanel viewData = new JPanel();
+            viewData.setBackground(Color.MAGENTA);
+
+            JPanel top = new JPanel(new GridLayout(0, 2));
+            top.setBorder(new LineBorder(Color.GREEN, 2));
+            top.add(view3D);
+            top.add(view2D);
+
+            JPanel bottom = new JPanel(new GridLayout(2, 0));
+            bottom.add(viewIsometric);
+            bottom.add(new JScrollPane(viewData));
+
+            GridBagConstraints gbc = new GridBagConstraints();
+            gbc.gridwidth = GridBagConstraints.REMAINDER;
+            gbc.weighty = 0.5f;
+            gbc.weightx = 1f;
+            gbc.fill = GridBagConstraints.BOTH;
+
+            content.add(top, gbc);
+            content.add(bottom, gbc);
+
+            panel.add(content);
+            panel.add(new JLabel("Character name"), BorderLayout.NORTH);
+
+            return  panel;
+
+        }
+
+        protected JPanel createRightPane() {
+
+            JPanel panel = new JPanel();
+            panel.setBackground(Color.BLUE);
+
+            return panel;
+
+        }
+
+    }
+
+}
+
+site design / logo © 2017 Stack Exchange Inc; user contributions licensed under cc by-sa 3.0 with attribution required. rev 2017.7.8.1261

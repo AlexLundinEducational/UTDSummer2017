@@ -1,0 +1,93 @@
+Chapter 4 Powerpoint
+
+Chapter 4 Class Notes
+
+
+Chapter 4 Book
+	4.1
+		Obj
+		
+		Content	
+	4.2
+		Obj
+		Math class
+		
+		Content
+		cp	- int i = min + (int)(Math.random() * ((max + 1) - min);
+		cp	- int i = 34 + (int)(Math.random() * 22);  
+		cp	- one package is automatically imported, java.lang, which has the Math class
+	4.3
+		Obj
+		Char type
+		ASCII and Unicode
+		Casting
+		Character testing
+		
+		Content
+		Escape sequence
+			\b, \t, \n, \f, \r, \\, \"
+			backspace, tab, linefeed, formfeed, carriage return, backslash, double quote
+			
+		Casting between char and numeric
+			char can be cast to ANY NUMERIC TYPE and vise versa
+			float cast to char....really float to int to char
+			explicit casting must be used when item cannot fit in desired location
+			char can range from '\0' to '\FFFF'
+	4.4
+		Obj
+		Special characters and escape sequences
+		Objects and instance methods
+		String object
+		Return string length
+		Return char at index
+		+ operator for concatenation
+		Reading strings and chars
+		String comparision
+		Substrings
+		
+		Content
+		
+		Instance method
+			requires specific object to call the method
+			referenceVaraible.methodName(arguments);
+			
+		Static method
+			doesn't require a object
+			Math functions
+			
+		String concatentation
+			String newRefVar = string1.concat(string2);
+			String newRefVar = string1 + string2;
+		
+		String comparision
+			equals(s1)
+			compareTo(s1)		// returns int equal to, less than or greater than 0 to indicate if string is equal to s1
+			DO NOT COMPARE WITH RELATIONAL OPERATORS
+			
+	4.5
+		Obj
+		Convert hex to dec
+		
+		Content
+	4.6
+		Obj
+		Output using System.out.printf
+		
+		Content
+		Format specifiers
+			%b, %c, %d, %f, %e, %s
+			boolean, character, decimal int, float, standard scientific, string
+			int count = 5;
+			double amount = 45.56;
+			System.out.printf ("count is %d and amount is %f", count, amout);
+			
+			// output // count is 5 and amount is 45.560000
+			
+		Width and precision
+			%(width)c
+			%(width)b
+			%(width)d
+			%(widthIncludingDec.digitsafter)f
+			%(widthIncludingDec.digitsAfter)e
+			%(width)s
+	

@@ -1,0 +1,82 @@
+Alex Lundin
+06-28-2017
+
+1
+	Pre and post increment with expressions
+	
+	What is the value of x at each point?
+	
+	int x = 0;
+	x = (x++) + 1;		
+						//	what is x now?
+	
+	++x;				//	what is x now?
+						// 	what is x now?
+
+2
+	Integer division, what does result equal at each point?
+	
+	int x = 5;
+	double y = 1.0;
+	int z = 1;
+	
+	double result = 0.0;
+	
+	result = x / z;					// here
+	result = x / y;					// here
+	result = (double)x / z;			// here
+	
+3
+	Dangling else
+	
+	Which if will the else pair with?
+	
+	if 		(x % 2 == 0)
+			((System.out.println("x is even"));
+
+			if	(x % 5 == 0)
+					(System.out.println ("x is divisible by 5");
+			
+			else	
+			System.out.println.println ("x is odd");
+
+4
+	What is the range of the char type in Unicode format?
+	
+5
+	How many spaces are added before the decimal integer printed below?
+	
+	int = 5;
+	Widthfactor = 20;
+	
+	System.out.printf("Decimal integer %5d", integer);
+	
+6
+	Where does the loop body start and end?
+	
+	int i = 1;
+	while (i < 10)
+		if(i % 2 == 0)
+			System.out.println(i);
+			i++;
+7
+	Match each property to the following items:
+	Instance Variable
+	Instance Method
+	Static Variable
+	Static Method
+	
+	-	requires an object to make the call
+	-	data that is specific to one object
+	- 	data that is shared by all objects of a classes
+	-	only requires the class name to make the call
+	
+8
+	Which type of of the three loops (for, while, do-while), cannot be re-written in a form of either of the other two?
+	
+9
+	What return types are avaiable to constructors in Java?
+	
+10
+	When will Java provide a default constructor for classes and when will it not?
+	

@@ -1,0 +1,72 @@
+Chapter 6 Powerpoint
+
+Chapter 6 Class Notes
+
+
+Chapter 6 Book
+	6.1
+		Obj
+		
+		Content	
+	6.2
+		Obj
+		formal parameters	- placeholder, for values passed in
+		actual parameters 	- invoking variables, arguments passed in
+		
+		Content
+		Method definition	- method name, formal parameters, return value type, body
+	6.3
+		Obj
+		Define methods with return value
+		
+		Content
+	6.4
+		Obj
+		Define methods without return value
+		
+		Content
+		Void does not return a value
+		
+		cp	- return type of main is always void
+		cp	- return statement must exist in value returning function
+			- caller can ignore return
+			- void can have a return statement, it will end the method execution
+			- a void method cannot return a value however
+		cp	- return type IS NOT PART OF METHOD SIGNATURE
+	6.5
+		Obj
+		Pass argument by value
+		
+		Content
+		cp	- argument(actual) can have same name as parameter (formal)
+	6.6
+		Obj
+		Modular, easy to read code
+		
+		Content
+	6.7
+		Obj
+		Convert hex to decimal
+		
+		Content
+	6.8
+		Obj
+		Method overloading and ambigous overloading
+		
+		Content
+	6.9
+		Obj
+		Variable scope
+		
+		Content
+		Local variable	- one defined in a method
+						- scope is entire method
+						
+	6.10
+		Obj
+		Software developement abstraction
+		Stepwise refinement
+		
+		Content
+
+	

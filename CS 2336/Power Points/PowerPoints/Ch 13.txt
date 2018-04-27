@@ -1,0 +1,63 @@
+Summary
+
+PowerPoint
+skip 12-16,38-43
+
+To design and use abstract classes (§13.2).
+To generalize numeric wrapper classes, BigInteger, and BigDecimal using the abstract Number class (§13.3).
+To process a calendar using the Calendar and GregorianCalendar classes (§13.4).
+To specify common behavior for objects using interfaces (§13.5).
+To define interfaces and define classes that implement interfaces (§13.5).
+To define a natural order using the Comparable interface (§13.6).
+To make objects cloneable using the Cloneable interface (§13.7).
+To explore the similarities and differences among concrete classes, abstract classes, and interfaces (§13.8).
+To design the Rational class for processing rational numbers (§13.9).
+To design classes that follow the class-design guidelines (§13.10).
+
+	public abstract class GraphicObject {
+	   // declare fields
+	   // declare nonabstract methods
+	   abstract void draw();
+	}
+	
+	Abstract Classes:
+	Abstract Methods and Classes
+	in a nonabstract subclass extended from an abstract class, all the abstract methods must be implemented, 
+	even if they are not used in the subclass. 
+	
+	Cannot be instantiated with NEW
+	Can be used as data type though, like an Array
+	GeometricObject[] geo = new GeometricObject[10];
+	
+	Rather, created by the non abstract child
+	
+	Overload - same name, diff args
+	Override - inheritance
+	
+	Interfaces:
+	
+	public interface InterfaceName { 
+	  constant declarations;
+	  abstract method signatures;
+	}
+	
+	data - public final static
+	methods - public abstract
+	
+	Interface v Abstract	
+	
+		Interface
+		Data constants
+		Method signatures only
+		Abstact
+		All kinds of data
+		Methods can be concerete or abstract
+		
+
+To specify common behavior for objects using interfaces (§13.5).
+To define interfaces and define classes that implement interfaces (§13.5).
+To define a natural order using the Comparable interface (§13.6).
+To make objects cloneable using the Cloneable interface (§13.7).
+To explore the similarities and differences among concrete classes, abstract classes, and interfaces (§13.8).
+
+		

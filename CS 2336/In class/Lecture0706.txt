@@ -1,0 +1,22 @@
+Lecture 07-06
+Assignment
+	Copy paste my date class, copy and use
+	
+	
+In class program
+
+
+Frame Notes
+	Frame
+		Is the holder
+		Comes with a panel
+		Panel - backboard for things to sit on, like backboard of picture frame
+		
+	Jframe
+		Content pane 	- default pane
+		Border layout	- layout of default pane(content pane)
+		
+		
+Generics
+
+Stacks, ques, priority

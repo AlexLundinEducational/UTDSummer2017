@@ -1,0 +1,208 @@
+Chapter 2 Powerpoint
+	Scanner 
+		is a class in the Java library
+		import.Java.util.Scanner
+		double d = instanceOfScanner.nextdouble()
+		
+	Identifiers
+		Letters, digits, _ and $
+		Cannot start with digit
+		Cannot be keywords
+		Cannot be true, false or nul
+	
+	Naming
+		Classes - capital first letter of words, lowercase otherwise
+		Variables - lower case, capital at start of new word
+		Named Constants - all caps, underscores btwn words
+		
+	Numericals
+		byte		8 bits
+		short		16 bits
+		int			32 bits
+		long		64 bits
+		float		32 IEEE 764
+		double		64 IEEE 764
+		
+	Floating points
+		Approximated
+		
+	Numerical literals
+		Any number that appears directly in the program
+		you can append a character to the end of the literal to designate which type it is
+		will not change the result of the operation
+		
+	Augmented
+		+=
+		-=
+		*=
+		/=
+		%=
+		
+	Numerical conversion
+		two operands
+		1 is double, other converts to double
+		1 is float, other converts to float
+		1 is long, other converts to long
+		otherwise, both to int
+		
+	Casting
+		Implicit, sending value of lesser accuracy into larger variable
+			int value into double variable
+			double d = 3; // type widening
+			
+		Explicitly
+			int i = (int)2.0 // type narrowing
+			int i = (int)2.9 // trucation
+			
+		Look up integer and double division
+		
+		45
+	
+Chapter 2 Book
+	2.1
+		Obj
+		
+		Content	
+	2.2
+		Obj
+		Simple computations
+		
+		Content
+		cp	- strings in java are split if they are on seperate lines and must use string concatenation operators
+			- + on the new line.
+	2.3
+		Obj
+		Scanner class
+		
+		Content
+		new Scanner(system.in);						// creates an object of the Scanner type
+		Scanner input = new Scanner (system.in);	// creates reference variable for Scanner type with address of a brand new Scanner object
+		double radius = input.nextDouble();			// reads next double from command line using input ref variable
+		
+		cp	- program terminates in uncontrolled manner if wrong input is sent increment
+		cp	- wildcard input causes no performance difference, the classes are imported on a use basis, this line only supplies location
+			- import java.util.*;
+			
+	2.4
+		Obj
+		Indentifiers
+		
+		Content
+		Names of classes, methods and variables
+		use complete words
+		
+		Legality
+			letters, digits, underscores and dollar signs
+			cannot start with digit
+			cannot be reserved word
+			cannot be true, false, null
+			any length desired
+			$ should not be used, but it is legal
+	2.5
+		Obj
+		Variables for data
+		
+		Content
+		
+		cp	- variables must be initialized before use
+	2.6
+		Obj
+		Assignment expressions
+		
+		Content
+		data type on left must be compatible with data type on right of assignment operator
+		
+		cp	- variable declaration must happen before assignment
+	2.7
+		Obj
+		Constants for permenant data
+		
+		Content
+	2.8
+		Obj
+		Naming conventions
+		
+		Content
+		Conventions	
+			Variables and methods, lowercase, capitalize first letter of each word after first
+			Class name, capitale first letter, don't use existing java classes
+			Constants, all caps
+		
+		cp	- code is easy to read and updates to contants can easily change whole program quickly
+		cp	- know convetion above
+		cp	- 
+	2.9
+		Obj
+		Numeric types
+		
+		Content
+		Integer types
+			- byte, short, int and long
+		Floating point
+			- float and double
+		
+		cp	- integer divison (either is int 25), float (either is floating point 25.0)
+		
+	2.10
+		Obj
+		Numeric literals
+		
+		Content
+		constants that appear directly in program
+		
+		cp	- float 7 to 8 sig fig
+		cp	- double 15 to 17 sig fig
+		cp	- underscore between two digits is allowed, to improve readability
+	2.11
+		Obj
+		Numeric expressions
+		
+		Content
+	2.12
+		Obj
+		
+		Content
+	2.13
+		Obj
+		Augmented assignment operators
+		
+		Content
+		i += 8  same as i = i + 8
+		
+	2.14
+		Obj
+		Post and pre increment
+		
+		Content
+		++i, i++
+		pre increment happens before expression evaluation
+		
+		cp 	- xpressions can be used as statements if the change varialbes and assign them
+		cp	- multiple assignments in one line is legal
+		
+	2.15
+		Obj
+		Casting
+		
+		Content
+		Widening a type, casting smaller to larger
+		Narrowing, casting larger to smaller, truncation, must be done explicitly
+		(type) valueToCast
+		
+		cp	- different numeric value types can be used together in expressions
+		cp	- double to int trucates, casting doesn't change the varaible being cast
+	2.16
+		Obje
+		Software developement process
+		
+		Content
+	2.17
+		Obj
+		
+		Content
+		
+	2.18
+		Obj
+		Common pitfalls
+		
+		Content

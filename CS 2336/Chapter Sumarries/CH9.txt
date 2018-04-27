@@ -1,0 +1,281 @@
+Chapter 9 Powerpoint
+
+Chapter 9 Class Notes
+
+
+Chapter 9 Book
+	Important checkpoints
+	cp9.17,cp9.19,cp9.23
+	Check points I don't understand
+	cp9.18
+	9.1
+		Obj
+		
+		Content	
+	9.2
+		Obj
+		Model objects with classes
+		UML graphical notation
+		
+		Content
+		Class is a blueprint made of:
+			- data fields / attributes / states
+			- behaviors / actions / methods
+		Classes are used to create objects, also called class instantiations
+		UML Notation
+			Class name
+			__________
+			data field:type
+			__________
+			constructor or method (argument:type) : return
+
+			
+			Example
+			
+			
+			Circle
+			__________
+			radius:double
+			__________
+			Circle()
+			Circle(newRadius:double)
+			getArea(): double
+			setRadius(newRadius: double): void
+	9.3
+		Obj
+		Define a class
+		Create objects
+		
+		Content
+		Within a java file, the main class is the one that contains the main function
+		Often time, this is refered to as the client of the class
+		The client of the class drives the program
+		Public class
+			- only one per file
+			- must have same name as file
+			
+		Example
+		clientOfManyClasses.java
+		
+		public class clientOfManyClasses{
+			public static main void {
+			// drive program
+			// create objects using other class definitions
+			// invoke methods from other class definitions				
+			}
+		}
+		
+		class object1 {
+			// avaiable to clientOfManyClasses
+		}
+		class object2 {
+			// avaiable to clientOfManyClasses
+		}
+		class object3 {
+			// avaiable to clientOfManyClasses
+		}	
+
+		cp	- defining class is blueprint, object is a actual item created from the blueprint
+		cp	- a class definition must have:
+			- class keyword, followed by class name
+			- public class MyObject
+		cp	- a object reference variable is decided by the user
+			- int a;	// sets a to integer type
+			- MyObject a;	// set a to MyObject type, a is the reference variable to a MyObject type
+		cp	- a object is with the new keyword followed by the objects constructor
+			- MyObject a = new MyObject();
+	9.4
+		Obj
+		Constructors
+		
+		Content
+		Constructors
+			must have same name as class
+			no return type, not even void
+			invoked using new operator
+			
+		cp	- constructors have no return type, methods double
+			- constructors are called with new keyword, methods aren'that
+		cp	- all classes have default constructor, even if not explicitly defined
+		
+		
+	9.5
+		Obj
+		Access object with reference variables
+		Reference variable type
+		Dot operator for accessing object data and methods
+		Define data fields and default values
+		object reference variables vs primitive data types
+		
+		Content
+		Objects methods can be accessed with the reference variable in combination with the dot operator
+		A object reference variable actually holds a address in memory, not the actual object
+		Arrays are treated as objects, the reference variable holder a address in memory
+		objectRefVar.dataField			// references a data field
+		objectRefVar.method(arguments)	// invokes a method
+		instance variable 	- dependent on the specific instance of the class (the radius on a specific circle out of many circles)
+		instance method		- must be used on a specific instance of the class, or calling object
+		Methods
+			Static
+					- doesn't not require a specific object
+					- Math.methodName (arguments);
+					- Math is the name of the class with static methods
+			Instance
+					- required object
+					- objectRefVar.methodName (arguments);
+					- objectRefVar is a programmer defined variable that holds the address of a instantiated object
+					
+		Anonymous objects	- not assigned to a reference variable				
+							- new Circle();
+							- no handle to this object
+		Reference data fields	
+			Data fields in classes can be of reference type, which is a type that is any instantiable class
+			Essentially a class in a class
+			String is a reference type
+			Set to null by default
+			Don't invoke a method on a null data field
+		
+		Reference data type	
+			Holds pointer to memory location for object
+		
+		Primitive data type
+			Holds the value
+			
+		cp	- dot operator used in combination with the objectRefVar can access data fields or invoke methods from classes
+		cp	- any anonymous object is one without a objectRefVar as a handle to it
+		cp	- the NullPointerException is when a method is called on a data field that is set to null
+		cp	- arrays are objects, they contain elements of primitive or object types, the default value is null
+		cp	- be able to read code and see what arugments constructors accept and when nullpointerexception happens
+		cp	- if we create our own constructor, the default one is immediatley removed
+		cp	- default value for boolean is false, char is '\u0000', int is 0, object or reference type is null
+		
+	9.6
+		Obj
+		Java classes, date, random, Point2D
+		
+		Content
+		
+	9.7
+		Obj
+		instance and static for variables and methods
+
+		Content
+		Static Variable
+			- shared by all objects of class
+			- also known as class variables
+			- stored in a common memory location
+			- all objects recieve changes to this location
+			- great example is numberOfObjects
+			- least amount of protection
+			
+		Static methods
+			- can be called without a object instance
+			- used to change variables shared by all classes
+			- great example is a numberOfObjectsSetter
+			- least amount of access
+			
+		Instance Variable	
+			- specific to the specific object of the class
+			- static methods cannot access these
+			- most amount of protection
+			
+		Instance Methods
+			- most amount of access
+			
+		Design Guide
+			- Not dependent on specific instance?
+				static
+			- Dependent on specific instance?
+				instance
+		Static method  at data field calls
+			- ClassName.methodName (arguments)
+			- ClassName.staticVariable
+			- this makes it easy to identify static method calls and data field accesses
+			- ultimatley, you could call on the objectRefVar, but this makes static calls easy to spot
+			
+		cp9.17	- understand how static and instance method calls are legal and when
+		cp9.18	- understand designed of static methods
+		cp9.19	- understand how invoking static and instance methods and variables is allowed
+	9.8
+		Obj
+		getter and setter methods
+		
+		Content
+		Visibility modifiers
+			public		- any other class
+			default		- same package
+			protected	- 
+			private		- only defining class
+			within a class, there is no restriction on data and methods
+		Constructors
+			public usually
+			privte only when user should not be able to create this type of object
+		
+		Getter
+			defined within class
+			public boolean isPropertyName()
+				for boolean return types		
+			public returnType getPropertyName()
+				for all other return types
+
+		Setter
+			defined in class
+			public void setPropertyName(dataType propertyValue)
+	9.9
+		Obj
+		encapsulate data
+		
+		Content
+		Making data fields private protects data and makes class easy to maintain
+		Users of the class do not need to change their code if values in the class change
+		
+	9.10
+		Obj
+		object arguments
+		
+		Content
+		java only uses pass by value
+		when a object is passed into a method, the reference address is passed
+		
+		cp9.23	- methods work with actual objects, but only copies of primitive types passed in
+	9.11
+		Obj
+		Object arrays
+		
+		Content
+		each index holds a reference to an object
+		by default, these will be null
+	9.12
+		Obj
+		immutable objects
+		
+		Content
+		immutable classes create objects whose contents cannot be changed
+			- all data fields must be private
+			- no public setter methods
+			- no accessor methods which return reference to mutable data fields
+		the String class is immutable
+	9.13
+		Obj
+		scope of variables in classes
+		
+		Content
+		In a class	
+			Instance - entire class
+			Static - entire class
+	9.14
+		Obj
+		keyword this to refer to object calling itself
+		
+		Content
+		this keyword gives us a way to reference and object that calls an instance method
+		
+		Constructors	
+			-	require this(arg-list) to appear before any other lines
+			-	it's best to implement classes with multiple constructs using the this keyword
+			-	constructors with no args can call other ones with args
+
+		cp	- scope of variables in class, how to use this keyword in constructors
+		cp	- roles of instance methods and static methods, instance variables affect just the object, static variables affect whole
+			- class
+	

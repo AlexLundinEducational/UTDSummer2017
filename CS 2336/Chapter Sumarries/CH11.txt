@@ -1,0 +1,131 @@
+Chapter 11 Powerpoint
+
+Chapter 11 Class Notes
+
+
+Chapter 11 Book
+	11.1
+		Obj
+		
+		Content	
+	11.2
+		Obj
+		Define subclass from superclass
+		Inheritance
+		
+		Content
+		cp	- a subclass is not ALWAYS a subset of a superclass, in some cases subclasses contain more data than super
+		cp	- extends is the keyword to define a subclass extended from a super
+		cp	- single inheritance is only one parent, multiple is not supported by java
+	11.3
+		Obj
+		Invoker superclass constructor with super()
+		
+		Content
+		super keyword is used to invoke super class methods and access data from super
+		must always call superclass constructor in the subclass as the FIRST statement
+		understand that using this keyword with no args calls default constructor
+		this keyword followed by args, this(args), calls value constructor
+		
+		cp	- java does not includ default constructor when value constructor is programmed in
+		cp	- super keyword invokes super methods and data access
+		cp	- false, value constructors can be accessed with super keyword as well as default
+		
+	11.4
+		Obj
+		Override instance methods in subclass
+		
+		Content
+		override	- same signature and return type in sub as in super
+					- instance overide, only if accessible
+					- static cannot override, hidden when redefined in sub
+					  called with SuperClassName.staticMethodName
+	
+		cp	- cannot override private method
+		cp	- cannot override static method, redefining in subclass hides the super
+		cp	- explicit super constructor, super(arg list);
+		cp	- super.method() to invoke a method from super
+	11.5
+		Obj
+		Override vs overload
+		
+		Content
+	11.6
+		Obj
+		toString() method in object class
+		
+		Content
+	11.7
+		Obj
+		Polymorphism
+		Dynamic binding
+		
+		Content
+	11.8
+		Obj
+		Polymorphism
+		Dynamic binding
+		
+
+		Content
+		Explain polymorphism
+				When a method using a type of the superclass, accepts a subclass object as well
+				using a object of subclass when a object of superclass is used
+				
+				
+		Explain dynamic binding
+				When a method accepts a object as a arugment
+				It determines the steps of execution at runtime depending on which level of object is sent increment
+				Start at most specific and work upwards until most generic case is found
+				Then the implemenataion path is complete
+				First found inmplementation is used
+				
+		Method matching
+			Has to due with signatures and overloading
+			Determined by DECLARED type of object
+			
+		Method binding
+			Happens at run time
+			Has to due with inheritance, polymorphism and overriding
+			Determined by ACTUAL type of object used in the method call				
+		
+	11.9
+
+		Obj
+		Casting
+		Explicit downcasting
+		
+		Content
+	11.10
+		Obj
+		equals method in Object class
+		
+		Content
+	11.11
+		Obj
+		store, retrieve and manipulate in ArrayList
+		
+		Content
+	11.12
+		Obj
+		construct array list from array
+		Sort, shuffle and obtain max and min
+		
+		Content
+	11.13
+		Obj
+		Stack class with array list
+		
+		Content
+	11.14
+		Obj
+		Data and methods in superclass with protected visisbility modifier
+		
+		Content
+	11.15
+		Obj
+		Prevent extending and overriding with final modifier
+		
+		Content
+
+	

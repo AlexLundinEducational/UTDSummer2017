@@ -1,0 +1,15 @@
+Summary
+
+PowerPoint
+1-9
+
+Graph
+	Pair containing vertices and edges
+	Vertice is a node
+	Edge connects nodes
+	Can be directed or undirected
+	Loops, self edges
+	
+Degree
+		number of edges touching a vertex is the degree
+		

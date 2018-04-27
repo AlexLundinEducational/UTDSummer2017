@@ -1,0 +1,93 @@
+Chapter 3 Powerpoint
+
+Chapter 3 Class Notes
+
+
+Chapter 3 Book
+	3.1
+		Obj
+		
+		Content	
+	3.2
+		Obj
+		Boolean type
+		
+		Content
+		True or false
+		Casting boolean to int or int to boolean is illegal
+	3.3
+		Obj
+		One way if
+		
+		Content
+	3.4
+		Obj
+		Two way if else
+		
+		Content
+	3.5
+		Obj
+		Nested if, multiway if
+		
+		Content
+	3.6
+		Obj
+		Pitfalls of if statement
+		
+		Content
+		1 forgetting braces
+		2 semicolon on if line
+		3 Redundant testing of boolean, 
+		4 dangling else, the else matches most recent, unmatched if
+		5 floating point test,
+	3.7
+		Obj
+		Math.random()
+		
+		Content
+	3.8
+		Obj
+		Examples
+		
+		Content
+	3.9
+		Obj
+		Examples
+		
+		Content
+	3.10
+		Obj
+		Logical operators
+		
+		Content
+	3.11
+		Obj
+		Combined selections
+		
+		Content
+	3.12
+		Obj
+		Combined selections
+		
+		Content
+	3.13
+		Obj
+		Switch statements
+		
+		Content
+	3.14
+		Obj
+		Conditional expression
+		
+		Content
+	3.15
+		Obj
+		Operator precendence and associativity
+		
+		Content
+	3.16
+		Obj
+		Debugging
+		
+		Content
+	

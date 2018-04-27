@@ -1,0 +1,48 @@
+https://stackoverflow.com/questions/12849851/using-grouplayout-in-a-jpanel-to-align-jtextfields-and-jlabels
+
+JFrame window = new JFrame();
+window.setTitle("Weekly Pay");
+window.setSize(300, 150);
+window.setResizable(false);
+window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+Color lGray = new Color(209, 209, 209);
+GroupLayout layout = new GroupLayout(window);
+
+JPanel panel = new JPanel();
+panel.setBackground(lGray);
+panel.setLayout(layout);
+layout.setAutoCreateGaps(true);
+layout.setAutoCreateContainerGaps(true);
+
+JLabel id = new JLabel("ID Number");
+JLabel hw = new JLabel("Hourly Wage");
+JLabel rh = new JLabel("Regular Hours");
+JLabel oh = new JLabel("Overtime Hours");
+JButton calc = new JButton("Calculate");
+JTextField idEntry = new JTextField(); //where the user imputs their ID
+JTextField hwEntry = new JTextField(); //where the user imputs their hourly wage
+JTextField rhEntry = new JTextField(); //where the user imputs their regular hours
+JTextField ohEntry = new JTextField(); //where the user imputs their overtime hours
+JLabel wp = new JLabel("Weekly Pay:");    
+
+GroupLayout.SequentialGroup hGroup = layout.createSequentialGroup();    
+hGroup.addGroup(layout.createParallelGroup().
+  addComponent(id).addComponent(hw).addComponent(rh).addComponent(oh).addComponent(calc));
+hGroup.addGroup(layout.createParallelGroup().
+  addComponent(idEntry).addComponent(hwEntry).addComponent(rhEntry).addComponent(ohEntry).addComponent(wp));
+layout.setHorizontalGroup(hGroup);
+
+GroupLayout.SequentialGroup vGroup = layout.createSequentialGroup();    
+vGroup.addGroup(layout.createParallelGroup(Alignment.BASELINE).
+    addComponent(id).addComponent(idEntry));
+vGroup.addGroup(layout.createParallelGroup(Alignment.BASELINE).
+    addComponent(hw).addComponent(hwEntry));
+vGroup.addGroup(layout.createParallelGroup(Alignment.BASELINE).
+    addComponent(rh).addComponent(rhEntry));
+vGroup.addGroup(layout.createParallelGroup(Alignment.BASELINE).
+    addComponent(oh).addComponent(ohEntry));
+vGroup.addGroup(layout.createParallelGroup(Alignment.BASELINE).
+    addComponent(calc).addComponent(wp));
+layout.setVerticalGroup(vGroup);
+
+window.setVisible(true);

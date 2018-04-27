@@ -1,0 +1,49 @@
+Summary
+
+PowerPoint
+	Terms
+	Node, vertex
+	Edges connect nodes, vertex
+	Root is source nodes
+	Leaves have no children
+	
+	Height , max number of edges from root to leaf
+	Depth, number of edges to nodes
+	Binary Tree
+		Each node has max of 2 children
+		
+	Traversal	
+		Pre-order
+			Root, left, right
+		In-order
+			left, root, root
+		Post-order
+			left, right, root
+			
+	Binary Search Tree	
+		Each node has max 2 children
+		Order
+			Left subtree less than node
+			Right subtree greater than node
+		Terms
+			Successor
+				Min node from right subtree
+			Predecessor
+				Max node from left subtree
+		Find
+		Worst Case time complexity
+			O(n)
+				lopsided tree, essentially a list
+				
+		Insert
+		Worst Case time complexity
+			O(n)
+				lopsided tree, essentially a list
+				
+		Build
+		Worst Case Time
+			O(n2)
+				lopsided starting list of data
+		Best Case
+			O(nlogn)
+				balanced starting list of data
